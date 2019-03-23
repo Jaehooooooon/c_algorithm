@@ -50,13 +50,13 @@ int main(int argc, char* argv[]) {
 	start = clock();
 	InsertionSort(input, N);
 	stop = clock();
-	elapsedTime = (double)(stop - start) / CLOCKS_PER_SEC;
+	elapsedTime = (double)(stop - start) / CLOCKS_PER_SEC * 1000;
 
 	for (int i = 0; i < N; i++) {
 		printf("%d\n", input[i]);
 	}
 
-	printf("Running time = %lf ms\n", elapsedTime);
+	printf("Running time = %.3lf ms\n", elapsedTime);
 
 	fclose(fp);
 	free(input);
